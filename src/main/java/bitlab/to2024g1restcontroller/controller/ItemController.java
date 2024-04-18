@@ -42,7 +42,7 @@ public class ItemController {
     return itemService.edit(item);
   }
 
-  @DeleteMapping ("{id}")// для удаления
+  @DeleteMapping("{id}")// для удаления
   public void deleteItem(@PathVariable Long id) {
     itemService.deleteById(id);
   }
