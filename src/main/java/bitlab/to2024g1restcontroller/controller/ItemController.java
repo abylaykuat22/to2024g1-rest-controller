@@ -1,5 +1,6 @@
 package bitlab.to2024g1restcontroller.controller;
 
+import bitlab.to2024g1restcontroller.dto.ItemDto;
 import bitlab.to2024g1restcontroller.entity.Item;
 import bitlab.to2024g1restcontroller.service.ItemService;
 import java.util.List;
@@ -33,8 +34,8 @@ public class ItemController {
   }
 
   @PostMapping// для добавления
-  public Item createItem(@RequestBody Item item) {
-    return itemService.create(item);
+  public Item createItem(@RequestBody ItemDto itemDto) {
+    return itemService.create(itemDto);
   }
 
   @PutMapping // для изменения
